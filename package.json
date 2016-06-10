@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon --watch context --watch views --watch views/partials --watch . app.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
     "hbs": "^4.0.0",
     "opener": "^1.4.1",
     "serve-static": "^1.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
   }
 }
