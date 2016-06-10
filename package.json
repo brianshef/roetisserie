@@ -4,6 +4,7 @@
   "description": "Inventory management for LuLaRoe consultants",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,7 +12,7 @@
     "url": "git+https://github.com/brianshef/roetisserie.git"
   },
   "author": "Brian Shef <brianshef@gmail.com>",
-  "license": "ISC",
+  "license": "Apache",
   "bugs": {
     "url": "https://github.com/brianshef/roetisserie/issues"
   },
