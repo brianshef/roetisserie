@@ -12,9 +12,16 @@
     "url": "git+https://github.com/brianshef/roetisserie.git"
   },
   "author": "Brian Shef <brianshef@gmail.com>",
-  "license": "Apache",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/brianshef/roetisserie/issues"
   },
-  "homepage": "https://github.com/brianshef/roetisserie#readme"
+  "homepage": "https://github.com/brianshef/roetisserie#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "handlebars": "^4.0.5",
+    "hbs": "^4.0.0",
+    "opener": "^1.4.1",
+    "serve-static": "^1.11.0"
+  }
 }
