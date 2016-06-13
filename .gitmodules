@@ -1,0 +1,6 @@
+[submodule "roetisserie-server"]
+	path = roetisserie-server
+	url = https://github.com/brianshef/roetisserie-server
+[submodule "roetisserie-client"]
+	path = roetisserie-client
+	url = https://github.com/brianshef/roetisserie-client
