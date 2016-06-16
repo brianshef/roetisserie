@@ -3,6 +3,7 @@ package main
 import (
   "fmt"
   "os/exec"
+  "runtime"
   "strings"
   "sync"
 )
@@ -26,6 +27,7 @@ func exe_cmd(cmd string, wg *sync.WaitGroup) {
 }
 
 func main() {
+  fmt.Println(runtime.GOOS)
   wg := new(sync.WaitGroup)
   for _, str := range commands {
     wg.Add(1)

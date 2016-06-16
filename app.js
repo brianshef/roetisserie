@@ -22,7 +22,7 @@ function unref(app) {
 
 function run() {
   //  Log the version
-  console.log(pkg.name, pkg.version);
+  console.log(pkg.name, pkg.version, 'on', os.platform());
   //  Start the server
   server.main();
   //  Open the default OS browser to the server's location
