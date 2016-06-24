@@ -4,9 +4,9 @@
   "description": "Inventory management for LuLaRoe consultants",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "nodemon --watch context --watch views --watch views/partials --watch . app.js"
+    "start": "meteor run"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brianshef/roetisserie.git"
@@ -18,13 +18,8 @@
   },
   "homepage": "https://github.com/brianshef/roetisserie#readme",
   "dependencies": {
-    "express": "^4.13.4",
-    "handlebars": "^4.0.5",
-    "hbs": "^4.0.0",
-    "opener": "^1.4.1",
-    "serve-static": "^1.11.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.9.2"
+    "meteor-node-stubs": "~0.2.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
   }
 }
