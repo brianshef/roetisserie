@@ -1,1 +1,88 @@
 /* CSS declarations go here */
+
+.body {
+  font-family: "Open Sans";
+}
+
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+.navbar-nav {
+    color: #fff;
+    background-color: #F67599;
+    border-color: #F67599; /*set the color you want here*/
+}
+
+/*
+  yellow  #FED141   WARNING
+  orange  #FF9D6E   DANGER
+  pink    #F67599   PRIMARY
+  fuschia #DD7FD3   ACCENT 1
+  purple  #9595D2   ACCENT 2
+  blue    #8BB8E8   INFO
+  mint    #64CCC9   SUCCESS / GOOD
+  grey    #888B8D   SECONDARY TEXT ?
+  dark    #333333   PRIMARY TEXT
+  white   #FFFFFF   LINK TEXT
+*/
+
+.warning {
+  color: #FED141;
+}
+.warning-bg {
+  background: #FED141;
+}
+
+.danger {
+  color: #FF9D6E;
+}
+.danger-bg {
+  background: #FF9D6E;
+}
+
+.primary {
+  color: #F67599;
+}
+.primary-bg {
+  background: #F67599;
+}
+
+.accent-1 {
+  color: #DD7FD3;
+}
+.accent-1-bg {
+  background: #DD7FD3;
+}
+
+.accent-2 {
+  color: #9595D2;
+}
+.accent-2-bg {
+  background: #9595D2;
+}
+
+.info {
+  color: #8BB8E8;
+}
+.info-bg {
+  background: #8BB8E8;
+}
+
+.success {
+  color: #64CCC9;
+}
+.success-bg {
+  background: #64CCC9;
+}
+
+.gray {
+  color: #888B8D;
+}
+.gray-bg {
+  background: #888B8D;
+}
+
+.text {
+  color: #333333;
+}
+.link-text {
+  color: #FFFFFF;
+}
