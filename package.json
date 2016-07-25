@@ -6,7 +6,6 @@
   "scripts": {
     "start": "meteor run"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brianshef/roetisserie.git"
@@ -19,6 +18,7 @@
   "homepage": "https://github.com/brianshef/roetisserie#readme",
   "dependencies": {
     "meteor-node-stubs": "~0.2.0",
+    "open": "0.0.5",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   }
