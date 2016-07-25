@@ -8,6 +8,7 @@ import (
   "sync"
 )
 
+var url = "http://localhost:3000"
 var commands = []string{"npm start"}
 
 func exe_cmd(cmd string, wg *sync.WaitGroup) {
@@ -15,6 +16,8 @@ func exe_cmd(cmd string, wg *sync.WaitGroup) {
   parts := strings.Fields(cmd)
   head := parts[0]
   parts = parts[1:len(parts)]
+
+  fmt.Println("Executing command", cmd, "...")
 
   out, err := exec.Command(head, parts...).Output()
   if err != nil {
@@ -26,6 +29,23 @@ func exe_cmd(cmd string, wg *sync.WaitGroup) {
   }
 }
 
+func open_browser(url string) {
+  fmt.Println("Opening browser ... ")
+  var err error
+  switch runtime.GOOS {
+  case "linux":
+    err = exec.Command("xdg-open", url).Start()
+  case "windows", "darwin":
+    err = exec.Command("open", url).Start()
+  default:
+    err = fmt.Errorf("unsupported platform")
+  }
+
+  if err != nil {
+    fmt.Println(err)
+  }
+}
+
 func main() {
   fmt.Println(runtime.GOOS)
   wg := new(sync.WaitGroup)
@@ -34,4 +54,5 @@ func main() {
     go exe_cmd(str, wg)
   }
   wg.Wait()
+  // open_browser(url)
 }
