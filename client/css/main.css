@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 
 .body {
-  font-family: "Open Sans";
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 /*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
