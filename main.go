@@ -1,35 +1,34 @@
 package main
 
 import (
-  "fmt"
-  "os/exec"
-  "runtime"
-  "./server"
+    "fmt"
+    "log"
+    "os/exec"
+    "runtime"
+    "github.com/brianshef/roetisserie/server"
 )
 
 var url = "http://localhost:3000"
 
 func open_browser(url string) {
-  fmt.Println("Opening browser ... ")
-  var err error
-  switch runtime.GOOS {
-  case "linux":
-    err = exec.Command("xdg-open", url).Start()
-  case "windows", "darwin":
-    err = exec.Command("open", url).Start()
-  default:
-    err = fmt.Errorf("unsupported platform")
-  }
+    log.Print("Opening browser ... ")
+    var err error
+    switch runtime.GOOS {
+    case "linux":
+        err = exec.Command("xdg-open", url).Start()
+    case "windows", "darwin":
+        err = exec.Command("open", url).Start()
+    default:
+        err = fmt.Errorf("unsupported platform")
+    }
 
-  if err != nil {
-    fmt.Println(err)
-  }
+    if err != nil {
+        log.Fatal(err)
+    }
 }
 
 func main() {
-    fmt.Println(runtime.GOOS)
-
-    server.Start()
-
+    log.Print(runtime.GOOS)
     open_browser(url)
+    server.Start()
 }
