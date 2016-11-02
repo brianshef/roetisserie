@@ -11,7 +11,9 @@ import (
     "github.com/brianshef/roetisserie/server"
 )
 
-var url = "http://localhost:3000"
+var host = "http://localhost"
+var port = "3000"
+var url = host + ":" + port
 var healthcheck_endpoint = "/healthcheck"
 
 func open_browser(url string) {
@@ -34,16 +36,17 @@ func open_browser(url string) {
 func main() {
     log.Print("OS: ", runtime.GOOS)
 
+    //  Client routine
     go func () {
-        check_url := url + healthcheck_endpoint
         for {
             time.Sleep(time.Second)
-            log.Println("Checking for server connection ... ")
-            resp, err := http.Get(check_url)
+            log.Println("Client checking for server connection ... ")
+            resp, err := http.Get(url + healthcheck_endpoint)
             if err != nil {
                 log.Println("Failed:", err)
                 continue
             }
+
             resp.Body.Close()
             if resp.StatusCode != http.StatusOK {
                 continue
@@ -53,9 +56,10 @@ func main() {
             break
         }
 
-        log.Print("SERVER UP AND RUNNING @ ", url)
+        log.Print("Client connection successful --> ", url)
         open_browser(url)
     }()
 
+    //  Server blocks without error; it must be started last, AFTER client
     server.Start()
 }
