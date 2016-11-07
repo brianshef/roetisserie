@@ -20,6 +20,12 @@ func main() {
     status := llr.ORDERED
     fmt.Println(status)     //  ORDERED
     status++
-    fmt.Println(status)     //  RECEIVED 
+    fmt.Println(status)     //  RECEIVED
 }
+```
+
+## Testing
+To test the `llr` package, execute the following:
+```
+go test github.com/brianshef/roetisserie/llr
 ```
